@@ -16,28 +16,26 @@ export class ContainerComponent {
     inStock: 10,
     pImage: '/assets/images/cont.jpg'
   }
-
   getDiscountedPrice() {
     return this.product.price - (this.product.price * this.product.discount / 100)
   }
-
   onNameChange(event: any){
     //this.name = event.target.value;
     //console.log(event.target.value);
   }
-
   decrementCartValue(){
     if(this.addToCart > 0){
       this.addToCart--;
-    }
-    
+    } 
   }
-
   incrementCartValue(){
     if(this.addToCart < this.product.inStock){
       this.addToCart++;
-    }
-    
+    }   
   }*/
   listOfString: string[]=['Mark','Steve','Merry','John','Serah'];
+  searchText:string="";
+  setSearchText(value: string){
+    this.searchText = value;
+  }
 }
